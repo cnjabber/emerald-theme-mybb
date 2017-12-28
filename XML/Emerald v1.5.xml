@@ -3241,7 +3241,7 @@ margin-right: 8px
         
     </td>]]></template>
 		<template name="header" version="1806"><![CDATA[<div class="haut" style="height:70px">
-	<a href="{$mybb->settings['bburl']}" id="logo"><i class="fa fa-diamond"></i>  微客空间 - We hack, we code, we share.</a>
+	<a href="{$mybb->settings['bburl']}" id="logo">微客空间 - We hack, we code, we share.</a>
 <span class="useroptions">
 	<a href="{$mybb->settings['bburl']}">Home</a>
 	<a href="{$mybb->settings['bburl']}/memberlist.php">Members</a>
