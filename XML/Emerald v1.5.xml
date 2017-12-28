@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme name="Emerald v1.5" version="1812">
+<theme name="Emerald v1.5" version="1814">
 	<properties>
 		<templateset><![CDATA[3]]></templateset>
 		<editortheme><![CDATA[mybb.css]]></editortheme>
@@ -11,7 +11,7 @@
 		<disporder><![CDATA[a:9:{s:10:"global.css";i:1;s:8:"css3.css";i:2;s:10:"footer.css";i:3;s:9:"extra.css";i:4;s:10:"usercp.css";i:5;s:17:"thread_status.css";i:6;s:16:"star_ratings.css";i:7;s:14:"showthread.css";i:8;s:9:"modcp.css";i:9;}]]></disporder>
 	</properties>
 	<stylesheets>
-		<stylesheet name="global.css" version="1812"><![CDATA[body {
+		<stylesheet name="global.css" version="1814"><![CDATA[body {
 	background: #F6F6F6 none repeat scroll 0% 0%;
 	color: #333;
 	text-align: center;
@@ -1964,7 +1964,7 @@ div.jqi .jqisubstate .jqibuttons button {
 		
 		]]>
 		</stylesheet>
-		<stylesheet name="css3.css" version="1812"><![CDATA[tr td.trow1:first-child,
+		<stylesheet name="css3.css" version="1814"><![CDATA[tr td.trow1:first-child,
 tr td.trow2:first-child,
 tr td.trow_shaded:first-child {
 	border-left: 0;
@@ -2193,7 +2193,7 @@ display:block;width:60%
 		
 		]]>
 		</stylesheet>
-		<stylesheet name="footer.css" version="1812"><![CDATA[
+		<stylesheet name="footer.css" version="1814"><![CDATA[
 html{  min-height: 100%;
   position: relative;}
 body {
@@ -2395,7 +2395,7 @@ body {
 		
 		]]>
 		</stylesheet>
-		<stylesheet name="extra.css" version="1812"><![CDATA[
+		<stylesheet name="extra.css" version="1814"><![CDATA[
 .scrollToTop {
 	background: #2ECC71;
 	color: white;
@@ -2532,7 +2532,7 @@ body {
 		
 		]]>
 		</stylesheet>
-		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1812"><![CDATA[.cp_options td:first-child{width:230px;}.usercp_options{margin:0;padding:0;list-style:none outside none;}
+		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1814"><![CDATA[.cp_options td:first-child{width:230px;}.usercp_options{margin:0;padding:0;list-style:none outside none;}
 
 .usercp_options>li{
         margin:0;        padding:8px 0px;}
@@ -2632,7 +2632,7 @@ td[class^=trow]{border:none;}
 		
 		]]>
 		</stylesheet>
-		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1812"><![CDATA[.thread_status:before {
+		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1814"><![CDATA[.thread_status:before {
     font-family: "FontAwesome";
     font-size: 20px
 }
@@ -2716,7 +2716,7 @@ td[class^=trow]{border:none;}
 		
 		]]>
 		</stylesheet>
-		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1812"><![CDATA[.star_rating_container {
+		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1814"><![CDATA[.star_rating_container {
 	display: inline-block;
 	margin-right: 6px;
 	float: right;
@@ -2842,7 +2842,7 @@ td[id*="rating_table"] {
 		
 		]]>
 		</stylesheet>
-		<stylesheet name="showthread.css" attachedto="showthread.php" version="1812"><![CDATA[ul.thread_tools,
+		<stylesheet name="showthread.css" attachedto="showthread.php" version="1814"><![CDATA[ul.thread_tools,
 ul.thread_tools li {
 	color: #27AE60;
 	padding-left: 14px;
@@ -2895,7 +2895,7 @@ margin-right: 8px
 		
 		]]>
 		</stylesheet>
-		<stylesheet name="modcp.css" attachedto="modcp.php" version="1812"><![CDATA[.modcp_nav_item {
+		<stylesheet name="modcp.css" attachedto="modcp.php" version="1814"><![CDATA[.modcp_nav_item {
 	display: block;
 }
 .modcp_nav_item:before {font-size: 16px;font-family: 'FontAwesome';width: 28px;margin-right: 3px;text-align: center;display: inline-block;padding: 2px 0px;color: #0F79F2;}
@@ -3281,7 +3281,7 @@ margin-right: 8px
 				{$awaitingusers}
 				<navigation>
 					<br />]]></template>
-		<template name="headerinclude" version="1812"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
+		<template name="headerinclude" version="1814"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
 <link rel="alternate" type="application/atom+xml" title="{$lang->latest_threads} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?type=atom1.0" />
 <meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
@@ -3364,7 +3364,7 @@ margin-right: 8px
 {$admincplink}{$modcplink}]]></template>
 		<template name="header_welcomeblock_member_admin" version="1805"><![CDATA[<script>var admin = '<span class="nav_link" ><a style="text-decoration:none;" href="{$mybb->settings['bburl']}/{$admin_dir}/index.php"><i class="fa fa-user-secret"></i> Admin CP</a></span>';</script>]]></template>
 		<template name="header_welcomeblock_member_moderator" version="1805"><![CDATA[<script>var mod = '<span class="nav_link" ><a style="text-decoration:none;" href="{$mybb->settings['bburl']}/modcp.php"><i class="fa fa-user-secret"></i> Mod CP</a></span>';</script>]]></template>
-		<template name="index" version="1812"><![CDATA[<html>
+		<template name="index" version="1814"><![CDATA[<html>
 <head>
 <title>{$mybb->settings['bbname']}</title>
 {$headerinclude}
@@ -3480,7 +3480,7 @@ lang.click_mark_read = "{$lang->click_mark_read}";
 {$footer}
 </body>
 </html>]]></template>
-		<template name="nav" version="1812"><![CDATA[<div class="navigation">
+		<template name="nav" version="1814"><![CDATA[<div class="navigation">
 	<a href="{$mybb->settings['bburl']}"><span id="home_bit"><i class="fa fa-home"></i></span></a>
 	<span id="nav_bit_complet" style="padding: 8px 2px;"><span style="padding: 8px;">{$nav}{$activesep}{$activebit}</span>
 	</span><span style="padding: 0px 8px;" id="nav_active"> {$nav}{$activesep}{$activebit}</span>
@@ -3495,7 +3495,7 @@ lang.click_mark_read = "{$lang->click_mark_read}";
 		<template name="nav_bit_active" version="1805"><![CDATA[<span class="active">{$navbit['name']}</span>]]></template>
 		<template name="nav_sep" version="1805"><![CDATA[<i class="fa fa-angle-double-right"></i>]]></template>
 		<template name="nav_sep_active" version="1805"><![CDATA[<i class="fa fa-angle-double-right"></i>]]></template>
-		<template name="postbit" version="1812"><![CDATA[{$ignore_bit}
+		<template name="postbit" version="1814"><![CDATA[{$ignore_bit}
 <a name="pid{$post['pid']}" id="pid{$post['pid']}"></a>
 <div class="post classic {$unapproved_shade}" style="{$post_visibility}" id="post_{$post['pid']}">
 <div class="post_flexible">
@@ -3545,7 +3545,7 @@ lang.click_mark_read = "{$lang->click_mark_read}";
 	<span style="float:left">{$lang->postbit_joined}</span><span style="float:right"> {$post['userregdate']}</span>
 	{$post['replink']}{$post['profilefield']}]]></template>
 		<template name="postbit_avatar" version="1805"><![CDATA[<div class="author_avatar"><a href="{$post['profilelink_plain']}"><img src="{$useravatar['image']}" alt="" width="85" height="85" /></a></div>]]></template>
-		<template name="postbit_classic" version="1812"><![CDATA[{$ignore_bit}
+		<template name="postbit_classic" version="1814"><![CDATA[{$ignore_bit}
 <a name="pid{$post['pid']}" id="pid{$post['pid']}"></a>
 <div class="post classic {$unapproved_shade}" style="{$post_visibility}" id="post_{$post['pid']}">
 <div class="post_flexible">
