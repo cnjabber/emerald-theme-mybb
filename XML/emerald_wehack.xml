@@ -3258,80 +3258,6 @@ margin-right: 8px
 		<template name="postbit_rep_button" version="1805"><![CDATA[<a href="javascript:MyBB.reputation({$post['uid']},{$post['pid']});" title="{$lang->postbit_reputation_add}" class="postbit_reputation_add"><i class="fa fa-heart"></i></a>]]></template>
 		<template name="postbit_warn" version="1805"><![CDATA[<a href="warnings.php?action=warn&amp;uid={$post['uid']}&amp;pid={$post['pid']}" title="{$lang->postbit_warn}" class="postbit_warn">{$lang->postbit_button_warn}</a>]]></template>
 		<template name="postbit_www" version="1805"><![CDATA[<a href="{$post['website']}" target="_blank" title="{$lang->postbit_website}" class="postbit_website"><i class="fa fa-globe"></i></a>]]></template>
-		<template name="headerinclude" version="1812"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
-<link rel="alternate" type="application/atom+xml" title="{$lang->latest_threads} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?type=atom1.0" />
-<meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
-<meta http-equiv="Content-Script-Type" content="text/javascript" />
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.js?ver=1804"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.plugins.min.js?ver=1804"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1804"></script>
-<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-{$stylesheets}
-<script type="text/javascript">
-	lang.unknown_error = "{$lang->unknown_error}";
-
-	lang.select2_match = "{$lang->select2_match}";
-	lang.select2_matches = "{$lang->select2_matches}";
-	lang.select2_nomatches = "{$lang->select2_nomatches}";
-	lang.select2_inputtooshort_single = "{$lang->select2_inputtooshort_single}";
-	lang.select2_inputtooshort_plural = "{$lang->select2_inputtooshort_plural}";
-	lang.select2_inputtoolong_single = "{$lang->select2_inputtoolong_single}";
-	lang.select2_inputtoolong_plural = "{$lang->select2_inputtoolong_plural}";
-	lang.select2_selectiontoobig_single = "{$lang->select2_selectiontoobig_single}";
-	lang.select2_selectiontoobig_plural = "{$lang->select2_selectiontoobig_plural}";
-	lang.select2_loadmore = "{$lang->select2_loadmore}";
-	lang.select2_searching = "{$lang->select2_searching}";
-
-	var cookieDomain = "{$mybb->settings['cookiedomain']}";
-	var cookiePath = "{$mybb->settings['cookiepath']}";
-	var cookiePrefix = "{$mybb->settings['cookieprefix']}";
-	var cookieSecureFlag = "{$mybb->settings['cookiesecureflag']}";
-	var deleteevent_confirm = "{$lang->deleteevent_confirm}";
-	var removeattach_confirm = "{$lang->removeattach_confirm}";
-	var loading_text = '{$lang->ajax_loading}';
-	var saving_changes = '{$lang->saving_changes}';
-	var use_xmlhttprequest = "{$mybb->settings['use_xmlhttprequest']}";
-	var my_post_key = "{$mybb->post_code}";
-	var rootpath = "{$mybb->settings['bburl']}";
-	var imagepath = "{$theme['imgdir']}";
-  	var yes_confirm = "{$lang->yes}";
-	var no_confirm = "{$lang->no}";
-	var MyBBEditor = null;
-	var spinner_image = "{$theme['imgdir']}/spinner.gif";
-	var spinner = "<img src='" + spinner_image +"' alt='' />";
-	var modal_zindex = 9999;
-</script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Raleway|Roboto:400,500,700" rel="stylesheet">
-<script>
-	$(document).ready(function(){
-	
-	//Check to see if the window is top if not then display button
-	$(window).scroll(function(){
-		if ($(this).scrollTop() > 100) {
-			$('.scrollToTop').fadeIn();
-		} else {
-			$('.scrollToTop').fadeOut();
-		}
-	});
-	
-	//Click event to scroll to top
-	$('.scrollToTop').click(function(){
-		$('html, body').animate({scrollTop : 0},800);
-		return false;
-	});
-	
-	$('.scrollToDown').click(function(){
-		$('html, body').animate({scrollTop:$(document).height()},800);
-		return false;
-	});
-	
-});
-</script>]]></template>
 		<template name="header_welcomeblock_guest" version="1805"><![CDATA[<script>
 	var connected = 0;
 </script>]]></template>
@@ -3339,73 +3265,6 @@ margin-right: 8px
 	var connected = 1;
 </script>
 {$admincplink}{$modcplink}]]></template>
-		<template name="index" version="1812"><![CDATA[<html>
-<head>
-<title>{$mybb->settings['bbname']}</title>
-{$headerinclude}
-<script type="text/javascript">
-<!--
-lang.no_new_posts = "{$lang->no_new_posts}";
-lang.click_mark_read = "{$lang->click_mark_read}";
-// -->
-</script>
-</head>
-<body>
-{$header}
-<div class="forum" style="float: left;">{$forums}{$boardstats}</div>
-<div class="side" style="float: right; width: 22%; margin: auto;">
-
-
-<table style="" class="tborder" border="0" cellpadding="{$theme['tablespace']}" cellspacing="{$theme['borderwidth']}">
-<tbody><tr>
-   <td style="font-weight: bold;" class="thead">
-  <i class="fa fa-bullhorn"></i> Announcements 
-   </td>
-</tr>
-
-<tr>
-   <td class="trow2" style="padding:11px">
-      <a href="#">This is an example !</a>
-   </td>
-</tr>
-</tbody></table>
-
- <table style="margin-top: 10px; margin-bottom: 10px;" class="tborder" border="0" cellpadding="{$theme['tablespace']}" cellspacing="{$theme['borderwidth']}">
-
-<tbody><tr>
-   <td style="font-weight: bold;" class="thead">
-  <i class="fa fa-bar-chart-o"></i> Statistics
-   </td>
-</tr>
-
-<tr>
-   <td style="padding: 12px;" class="trow2">
-  <span style="float:left">Members :</span> <span style="float:right">{$stats['numusers']}</span>
-   </td>
-</tr>
-   
-<tr>
-   <td style="padding: 12px;" class="trow2">
-  <span style="float:left">Posts :</span> <span style="float:right">{$stats['numposts']} </span>
-   </td>
-</tr>
-   
-<tr>
-   <td style="padding: 12px;" class="trow2">
-  <span style="float:left">Threads :</span> <span style="float:right">{$stats['numthreads']}</span>
-   </td>
-</tr>
-<tr style="">
-   <td style="padding: 12px;" class="trow2">
-  <span style="float:left">Newest Member :</span> <span style="float:right"><a href="#">{$newestmember}</a></span>
-   </td>
-</tr>
-</tbody></table>
-</div>
-<br class="clear" />
-{$footer}
-</body>
-</html>]]></template>
 		<template name="index_boardstats" version="1805"><![CDATA[<span class="wo_title"><i class="fa fa-question-circle"></i> {$lang->whos_online}</span>
 
 <span class="wo_desc">{$whosonline}</span>
@@ -3459,6 +3318,82 @@ lang.click_mark_read = "{$lang->click_mark_read}";
 		<template name="nav_bit_active" version="1805"><![CDATA[<span class="active">{$navbit['name']}</span>]]></template>
 		<template name="header_welcomeblock_member_admin" version="1814"><![CDATA[<script>var admin = '<span class="nav_link" ><a style="text-decoration:none;" href="{$mybb->settings['bburl']}/{$admin_dir}/index.php"><i class="fa fa-user-secret"></i> $lang->welcome_admin</a></span>';</script>]]></template>
 		<template name="header_welcomeblock_member_moderator" version="1814"><![CDATA[<script>var mod = '<span class="nav_link" ><a style="text-decoration:none;" href="{$mybb->settings['bburl']}/modcp.php"><i class="fa fa-user-secret"></i> $lang->welcome_modcp</a></span>';</script>]]></template>
+		<template name="headerinclude" version="1814"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
+<link rel="alternate" type="application/atom+xml" title="{$lang->latest_threads} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?type=atom1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.js?ver=1804"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.plugins.min.js?ver=1804"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1804"></script>
+<link href='/css/Lobster.css' rel='stylesheet' type='text/css'>
+<!--
+<link href='https://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{$stylesheets}
+<script type="text/javascript">
+	lang.unknown_error = "{$lang->unknown_error}";
+
+	lang.select2_match = "{$lang->select2_match}";
+	lang.select2_matches = "{$lang->select2_matches}";
+	lang.select2_nomatches = "{$lang->select2_nomatches}";
+	lang.select2_inputtooshort_single = "{$lang->select2_inputtooshort_single}";
+	lang.select2_inputtooshort_plural = "{$lang->select2_inputtooshort_plural}";
+	lang.select2_inputtoolong_single = "{$lang->select2_inputtoolong_single}";
+	lang.select2_inputtoolong_plural = "{$lang->select2_inputtoolong_plural}";
+	lang.select2_selectiontoobig_single = "{$lang->select2_selectiontoobig_single}";
+	lang.select2_selectiontoobig_plural = "{$lang->select2_selectiontoobig_plural}";
+	lang.select2_loadmore = "{$lang->select2_loadmore}";
+	lang.select2_searching = "{$lang->select2_searching}";
+
+	var cookieDomain = "{$mybb->settings['cookiedomain']}";
+	var cookiePath = "{$mybb->settings['cookiepath']}";
+	var cookiePrefix = "{$mybb->settings['cookieprefix']}";
+	var cookieSecureFlag = "{$mybb->settings['cookiesecureflag']}";
+	var deleteevent_confirm = "{$lang->deleteevent_confirm}";
+	var removeattach_confirm = "{$lang->removeattach_confirm}";
+	var loading_text = '{$lang->ajax_loading}';
+	var saving_changes = '{$lang->saving_changes}';
+	var use_xmlhttprequest = "{$mybb->settings['use_xmlhttprequest']}";
+	var my_post_key = "{$mybb->post_code}";
+	var rootpath = "{$mybb->settings['bburl']}";
+	var imagepath = "{$theme['imgdir']}";
+  	var yes_confirm = "{$lang->yes}";
+	var no_confirm = "{$lang->no}";
+	var MyBBEditor = null;
+	var spinner_image = "{$theme['imgdir']}/spinner.gif";
+	var spinner = "<img src='" + spinner_image +"' alt='' />";
+	var modal_zindex = 9999;
+</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Raleway|Roboto:400,500,700" rel="stylesheet"> -->
+<script>
+	$(document).ready(function(){
+	
+	//Check to see if the window is top if not then display button
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 100) {
+			$('.scrollToTop').fadeIn();
+		} else {
+			$('.scrollToTop').fadeOut();
+		}
+	});
+	
+	//Click event to scroll to top
+	$('.scrollToTop').click(function(){
+		$('html, body').animate({scrollTop : 0},800);
+		return false;
+	});
+	
+	$('.scrollToDown').click(function(){
+		$('html, body').animate({scrollTop:$(document).height()},800);
+		return false;
+	});
+	
+});
+</script>]]></template>
 		<template name="postbit" version="1812"><![CDATA[{$ignore_bit}
 <a name="pid{$post['pid']}" id="pid{$post['pid']}"></a>
 <div class="post classic {$unapproved_shade}" style="{$post_visibility}" id="post_{$post['pid']}">
@@ -4038,5 +3973,72 @@ lang.click_mark_read = "{$lang->click_mark_read}";
 		document.getElementsByClassName("navigation")[0].innerHTML += admin;
 </script>
 </div>]]></template>
+		<template name="index" version="1814"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']}</title>
+{$headerinclude}
+<script type="text/javascript">
+<!--
+lang.no_new_posts = "{$lang->no_new_posts}";
+lang.click_mark_read = "{$lang->click_mark_read}";
+// -->
+</script>
+</head>
+<body>
+{$header}
+<div class="forum" style="float: left;">{$forums}{$boardstats}</div>
+<div class="side" style="float: right; width: 22%; margin: auto;">
+
+
+<table style="" class="tborder" border="0" cellpadding="{$theme['tablespace']}" cellspacing="{$theme['borderwidth']}">
+<tbody><tr>
+   <td style="font-weight: bold;" class="thead">
+  <i class="fa fa-bullhorn"></i> Announcements 
+   </td>
+</tr>
+
+<tr>
+   <td class="trow2" style="padding:11px">
+      Matrix 聊天室：#wehack:matrixim.cc
+   </td>
+</tr>
+</tbody></table>
+
+ <table style="margin-top: 10px; margin-bottom: 10px;" class="tborder" border="0" cellpadding="{$theme['tablespace']}" cellspacing="{$theme['borderwidth']}">
+
+<tbody><tr>
+   <td style="font-weight: bold;" class="thead">
+  <i class="fa fa-bar-chart-o"></i> Statistics
+   </td>
+</tr>
+
+<tr>
+   <td style="padding: 12px;" class="trow2">
+  <span style="float:left">Members :</span> <span style="float:right">{$stats['numusers']}</span>
+   </td>
+</tr>
+   
+<tr>
+   <td style="padding: 12px;" class="trow2">
+  <span style="float:left">Posts :</span> <span style="float:right">{$stats['numposts']} </span>
+   </td>
+</tr>
+   
+<tr>
+   <td style="padding: 12px;" class="trow2">
+  <span style="float:left">Threads :</span> <span style="float:right">{$stats['numthreads']}</span>
+   </td>
+</tr>
+<tr style="">
+   <td style="padding: 12px;" class="trow2">
+  <span style="float:left">Newest Member :</span> <span style="float:right"><a href="#">{$newestmember}</a></span>
+   </td>
+</tr>
+</tbody></table>
+</div>
+<br class="clear" />
+{$footer}
+</body>
+</html>]]></template>
 	</templates>
 </theme>
